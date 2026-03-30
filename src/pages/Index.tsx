@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-primary">
+      <header className="bg-red-700">
         <div className="max-w-3xl mx-auto px-4 py-6 flex items-center gap-3">
           <ClipboardList className="h-8 w-8 text-primary-foreground" />
           <div>
@@ -23,7 +23,7 @@ const Index = () => {
           </div>
         </div>
         {/* Red accent bar */}
-        <div className="h-1" style={{ backgroundColor: "hsl(0, 75%, 45%)" }} />
+        <div className="h-1" style={{ backgroundColor: "rgb(0, 0, 0)" }} />
       </header>
 
       {/* Content */}
