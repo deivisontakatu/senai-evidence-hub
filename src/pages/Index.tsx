@@ -10,25 +10,28 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-primary">
-        <div className="max-w-3xl mx-auto px-4 py-6 flex items-center gap-3">
-          <ClipboardList className="h-8 w-8 text-primary-foreground" />
-          <div>
-            <h1 className="text-xl font-bold text-primary-foreground tracking-tight">
-              Registro de Evidências
-            </h1>
-            <p className="text-sm text-primary-foreground/70">
-              SENAI — Sistema de Atividades
-            </p>
+      <header className="flex flex-col lg:flex-row p-5 bg-brand-primary gap-10">
+        <div className="flex flex-col gap-3">
+          <img
+            src="/logo_unisenai.png"
+            alt="Logo UNISENAI"
+            className="w-40 lg:h-fit lg:w-fit"
+          />
+          <div className="text-brand-accent">
+            <p className="text-sm font-bold">Campus Sorocaba - Santa Rosália</p>
           </div>
         </div>
-        {/* Red accent bar */}
-        <div className="h-1" style={{ backgroundColor: "hsl(0, 75%, 45%)" }} />
+
+        <div className="flex items-center justify-center lg:justify-start lg:pl-48 w-full">
+          <h1 className="text-xl md:text-2xl font-bold tracking-tight">
+            Registro de Atividades Acadêmicas
+          </h1>
+        </div>
       </header>
 
       {/* Content */}
-      <main className="max-w-3xl mx-auto px-4 py-8">
-        <Card className="shadow-lg border-0">
+      <main className="flex items-center justify-center mx-auto px-4 py-8 bg-brand-secondary">
+        <Card className="w-full max-w-3xl shadow-lg border-0 bg-brand-primary">
           <CardContent className="p-6 sm:p-8">
             {pdfUrl ? (
               <SuccessScreen
@@ -37,12 +40,15 @@ const Index = () => {
               />
             ) : (
               <>
-                <div className="mb-6">
-                  <h2 className="text-lg font-bold text-foreground">
-                    Nova Atividade
-                  </h2>
+                <div className="flex flex-col items-center mb-6 gap-2">
+                  <span className="flex gap-5">
+                    <ClipboardList className="h-8 w-8 text-brand-secondary" />
+                    <h2 className=" text-xl lg:text-2xl font-bold text-foreground text-center">
+                      Nova Atividade
+                    </h2>
+                  </span>
                   <p className="text-sm text-muted-foreground">
-                    Preencha os dados abaixo para registrar a evidência.
+                    Preencha os dados abaixo para registrar a evidência
                   </p>
                 </div>
                 <ActivityForm onSuccess={(url) => setPdfUrl(url)} />
