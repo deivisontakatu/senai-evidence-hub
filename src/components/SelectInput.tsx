@@ -9,12 +9,11 @@ import {
 } from "@/components/ui/select"
 
 const items = [
-    { label: "Iniciação Científica", value: "iniciacao_cientifica" },
-    { label: "Projeto de Extensão", value: "projeto_extensão" },
-    { label: "Visita Técnica", value: "visita_tecnica" },
-    { label: "Palestra/Workshop/Masterclass", value: "palestras" },
-    { label: "Visita Técnica", value: "visita_tecnica" },
-    { label: "Outro", value: "outro" },
+    { label: "Iniciação Científica", value: "Iniciação Científica" },
+    { label: "Projeto de Extensão", value: "Projeto de Extensão" },
+    { label: "Visita Técnica", value: "Visita Técnica" },
+    { label: "Palestra/Workshop/Masterclass", value: "Palestra/Workshop/Masterclass" },
+    { label: "Outro", value: "Outro" },
 ]
 
 export function SelectInput({value,onChange}) {
