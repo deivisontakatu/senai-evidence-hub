@@ -1,10 +1,13 @@
 -- Create table for activities
 CREATE TABLE public.atividades (
   id UUID NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY,
-  nome TEXT NOT NULL,
-  descricao TEXT NOT NULL,
+  titulo TEXT NOT NULL,
+  membros TEXT NOT NULL,
+  categoria TEXT NOT NULL,
   data DATE NOT NULL,
+  empresa TEXT,
   local TEXT NOT NULL,
+  descricao TEXT NOT NULL,
   fotos JSONB DEFAULT '[]'::jsonb,
   pdf_url TEXT,
   created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now()
