@@ -10,20 +10,20 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="flex p-5 bg-brand-primary">
+      <header className="flex flex-col lg:flex-row p-5 bg-brand-primary gap-10">
         <div className="flex flex-col gap-3">
           <img
             src="/logo_unisenai.png"
             alt="Logo UNISENAI"
-            className="h-fit w-fit"
+            className="w-40 lg:h-fit lg:w-fit"
           />
           <div className="text-brand-accent">
             <p className="text-sm font-bold">Campus Sorocaba - Santa Rosália</p>
           </div>
         </div>
 
-        <div className="flex items-center pl-48 w-full">
-          <h1 className="text-2xl font-bold tracking-tight">
+        <div className="flex items-center justify-center lg:justify-start lg:pl-48 w-full">
+          <h1 className="text-xl md:text-2xl font-bold tracking-tight">
             Registro de Atividades Acadêmicas
           </h1>
         </div>
@@ -43,7 +43,7 @@ const Index = () => {
                 <div className="flex flex-col items-center mb-6 gap-2">
                   <span className="flex gap-5">
                     <ClipboardList className="h-8 w-8 text-brand-secondary" />
-                    <h2 className="text-2xl font-bold text-foreground text-center">
+                    <h2 className=" text-xl lg:text-2xl font-bold text-foreground text-center">
                       Nova Atividade
                     </h2>
                   </span>
